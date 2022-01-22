@@ -40,7 +40,7 @@ public class Task1 {
                 result[2]++;
             if (list[i] % 2 == 0)
                 result[3]++;
-            else result[4] = result[4] + 1;
+            else result[4]++;
             result[5] += list[i];
         }
         System.out.println(Arrays.toString(list));
