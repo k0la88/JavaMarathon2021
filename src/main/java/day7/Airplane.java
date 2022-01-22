@@ -1,18 +1,23 @@
-package day6;
+package day7;
 
 public class Airplane {
     private String manufacturer;
     private int year;
-    private double length;
-    private double weight;
-    private double fuel = 0;
+    private int length;
+    private int weight;
+    private int fuel;
 
-    public Airplane(String manufacturer, int year, double length, double weight, double fuel) {
+    public Airplane(String manufacturer, int year, int length, int weight, int fuel) {
         this.manufacturer = manufacturer;
         this.year = year;
         this.length = length;
         this.weight = weight;
         this.fuel = fuel;
+    }
+
+    public static void compareAirplanes(Airplane airplane1, Airplane airplane2) {
+        System.out.println((airplane1.length > airplane2.length) ? airplane1.manufacturer + " длиннее." :
+                airplane2.manufacturer + " длиннее.");
     }
 
     public void setManufacturer(String manufacturer) {
@@ -23,15 +28,15 @@ public class Airplane {
         this.year = year;
     }
 
-    public void setLength(double length) {
+    public void setLength(int length) {
         this.length = length;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
-    public void setFuel(double fuel) {
+    public void setFuel(int fuel) {
         this.fuel = fuel;
     }
 
@@ -47,4 +52,5 @@ public class Airplane {
     public void fillUp(int n) {
         this.fuel += n;
     }
+
 }

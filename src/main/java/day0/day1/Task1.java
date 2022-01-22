@@ -1,11 +1,11 @@
-package day1;
+package day0.day1;
 
-public class Task2 {
+public class Task1 {
     public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
+        int i = 0;
+        while (i < 10) {
             System.out.print("JAVA" + " ");
-
+            i++;
         }
-
     }
 }
