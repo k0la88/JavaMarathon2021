@@ -5,4 +5,4 @@
  
 Ссылка на страницу с информацией о марафоне: https://java-marathon.tilda.ws/
 
-Авторы: Алишев Наиль https://www.youtube.com/c/alishevN, Бурлаков Сергей https://t.me/sergetonte
+Авторы: Алишев Наиль https://www.youtube.com/c/alishevN, Бурлаков Сергей https://t.me/sergetonte# JavaMarafon
