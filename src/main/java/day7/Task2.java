@@ -44,8 +44,5 @@ public class Task2 {
         Player.info();
         Player.run(player1, "устать");
         Player.info();
-
     }
-
-
 }
