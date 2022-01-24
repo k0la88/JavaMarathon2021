@@ -7,8 +7,8 @@ package day7;
  */
 public class Task1 {
     public static void main(String[] args) {
-        Airplane airplane1 = new Airplane("Боинг", 2010, 35, 5000, 500);
-        Airplane airplane2 = new Airplane("ТУ-160", 1985, 38, 5800, 800);
+        Airplane airplane1 = new Airplane("Боинг", 2010, 40, 5000, 500);
+        Airplane airplane2 = new Airplane("ТУ-160", 1985, 36, 5800, 800);
         Airplane.compareAirplanes(airplane1, airplane2);
 
 

@@ -12,6 +12,10 @@ public class Player {
             countPlayers++;
     }
 
+    public void setStamina(int stamina) {
+        this.stamina = stamina;
+    }
+
     public int getStamina() {
         return stamina;
     }
@@ -23,12 +27,16 @@ public class Player {
     public static void run(Player player, String decree) {
         if (decree.equals("устать")) {
             System.out.println("Игрок бежит");
-            player.stamina = 0;
+            //player.stamina = MIN_STAMINA;    // можно наверное и без цикла было бы.
+            for (int i = player.getStamina() ; i > 0 ; i--)
+                player.stamina--;
+
+
         } else if (player.getStamina() > MIN_STAMINA) {
             System.out.println("Игрок бежит");
             player.stamina--;
         }
-        if (player.getStamina() == 0) {
+        if (player.getStamina() == MIN_STAMINA) {
             System.out.println("Игроку нужен отдых. Игрок уходит с поля");
             if (getCountPlayers() > 0)
                 countPlayers--;
@@ -52,7 +60,10 @@ public class Player {
             }
             System.out.println("На поле " + getCountPlayers() + str2 + ".");
             System.out.println("Команды неполные. На поле еще есть " + (6 - getCountPlayers()) + str + ".");
-        } else System.out.println((getCountPlayers() == 6) ? "На поле нет " + text[2] : "На поле нет " + text[5]);
+        } else
+            System.out.println((getCountPlayers() == 6)
+                ? "На поле "+ Player.getCountPlayers()+text[5] + "," + text[2] + " нет."
+                : "На поле нет" + text[5] + ".");
 
     }
 }

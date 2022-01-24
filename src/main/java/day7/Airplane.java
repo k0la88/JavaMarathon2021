@@ -15,42 +15,60 @@ public class Airplane {
         this.fuel = fuel;
     }
 
-    public static void compareAirplanes(Airplane airplane1, Airplane airplane2) {
-        System.out.println((airplane1.length > airplane2.length) ? airplane1.manufacturer + " длиннее." :
-                airplane2.manufacturer + " длиннее.");
+    public String getManufacturer() {
+        return manufacturer;
     }
 
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
 
+    public int getYear() {
+        return year;
+    }
+
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public int getLength() {
+        return length;
     }
 
     public void setLength(int length) {
         this.length = length;
     }
 
+    public int getWeight() {
+        return weight;
+    }
+
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public int getFuel() {
+        return fuel;
     }
 
     public void setFuel(int fuel) {
         this.fuel = fuel;
     }
 
-    public double getFuel() {
-        return fuel;
-    }
-
-    void info() {
-        System.out.println("Изготовитель: " + manufacturer + ", год выпуска: " + year +
-                ", длина: " + length + ", вес: " + weight + ", количество топлива в баке: " + fuel);
-    }
-
     public void fillUp(int n) {
         this.fuel += n;
     }
 
+    void info() {
+        System.out.println("Изготовитель: " + getManufacturer() + ", год выпуска: " + getYear() +
+                ", длина: " + getLength() + ", вес: " + getWeight() + ", количество топлива в баке: " + getFuel());
+    }
+
+    public static  void compareAirplanes(Airplane airplane1, Airplane airplane2){
+        if (airplane1.getLength() != airplane2.getLength()) {
+            System.out.println((airplane1.getLength() > airplane2.getLength())
+                    ? airplane1.getManufacturer() + " длиннее чем " + airplane2.getManufacturer()
+                    : airplane2.getManufacturer() + " длиннее чем " + airplane1.getManufacturer());
+        } else System.out.println("Оба самолета одинаковой длинны.");
+    }
 }
