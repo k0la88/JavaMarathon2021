@@ -61,9 +61,9 @@ public class Player {
             System.out.println("На поле " + getCountPlayers() + str2 + ".");
             System.out.println("Команды неполные. На поле еще есть " + (6 - getCountPlayers()) + str + ".");
         } else
-            System.out.println((getCountPlayers() == 6)
-                ? "На поле "+ Player.getCountPlayers()+text[5] + "," + text[2] + " нет."
-                : "На поле нет" + text[5] + ".");
+            if (getCountPlayers() == 6) System.out.println("На поле "+ Player.getCountPlayers()+text[5] +
+                    "," + text[2] + " нет.");
+            else System.out.println("На поле нет" + text[5] + ".");
 
     }
 }
