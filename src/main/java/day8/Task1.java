@@ -19,16 +19,14 @@ public class Task1 {
         //System.out.println(str);
         long stopTime = System.currentTimeMillis();
         System.out.println("Длительность работы, в мс.: " + (stopTime - startTime));
-        long startTime1 = System.currentTimeMillis();
 
+        startTime = System.currentTimeMillis();
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i <= 20000; i++) {
-            sb.append(i);
-            sb.append(" ");
-        }
+        for (int i = 0; i <= 20000; i++)
+            sb.append(i).append(" ");
         //System.out.println(sb);
-        long stopTime1 = System.currentTimeMillis();
-        System.out.println("Длительность работы, в мс.: " + (stopTime1 - startTime1));
+        stopTime = System.currentTimeMillis();
+        System.out.println("Длительность работы, в мс.: " + (stopTime - startTime));
 
     }
 }
